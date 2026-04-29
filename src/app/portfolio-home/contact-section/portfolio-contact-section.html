@@ -1,0 +1,35 @@
+<div>
+  <h2 class="font-mono text-[clamp(2rem,4vw,3rem)] font-bold text-[#F8FAFC]">Contact</h2>
+  <p class="mt-4 max-w-[780px] text-[20px] leading-[1.7] text-[#94A3B8]">
+    Open for collaboration, freelance work, and product partnerships.
+  </p>
+
+  <div class="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
+    <div class="rounded-[12px] border border-[rgba(148,163,184,0.3)] bg-[#0F172A]/60 p-6">
+      <p class="text-[14px] uppercase tracking-[0.08em] text-[#94A3B8]">Email</p>
+      <a href="mailto:hello@portfolio.com" class="mt-3 block text-[28px] text-[#E2E8F0] transition hover:text-[#60A5FA]">
+        hello@portfolio.com
+      </a>
+      <p class="mt-3 text-[16px] text-[#94A3B8]">Belgrade, Serbia · Remote worldwide</p>
+    </div>
+
+    <div class="rounded-[12px] border border-[rgba(148,163,184,0.3)] bg-[#0F172A]/60 p-6">
+      <p class="text-[14px] uppercase tracking-[0.08em] text-[#94A3B8]">Social</p>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a
+          *ngFor="let item of socialLinks"
+          [href]="item.href"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center gap-2 rounded-[999px] border border-[rgba(148,163,184,0.3)] px-4 py-2 text-[14px] text-[#E2E8F0] transition hover:border-[#60A5FA] hover:text-[#60A5FA]"
+        >
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="item.iconPath" />
+          </svg>
+          {{ item.label }}
+        </a>
+      </div>
+      <p class="mt-5 text-[13px] uppercase tracking-[0.08em] text-[#64748B]">© {{ currentYear }} Bree P.</p>
+    </div>
+  </div>
+</div>
