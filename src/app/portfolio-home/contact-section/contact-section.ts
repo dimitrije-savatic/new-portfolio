@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-portfolio-contact-section',
+  selector: 'app-contact-section',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './portfolio-contact-section.html',
+  templateUrl: './contact-section.html',
 })
-export class PortfolioContactSectionComponent {
+export class ContactSectionComponent {
   @Input({ required: true }) socialLinks: Array<{ label: string; href: string; iconPath: string }> = [];
   @Input({ required: true }) currentYear = new Date().getFullYear();
 }
